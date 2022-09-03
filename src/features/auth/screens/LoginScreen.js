@@ -11,6 +11,7 @@ import {
   AuthButton,
   InputContainer,
   InputForm,
+  Title,
 } from "../components/auth.styles";
 
 const LoginScreen = ({ navigation }) => {
@@ -21,7 +22,11 @@ const LoginScreen = ({ navigation }) => {
   return (
     <BackgroundImage>
       <BackgroundCover />
+
       <InputContainer>
+        <Spacer size="large" />
+        <Title>SIgn In</Title>
+        <Spacer size="large" />
         <InputForm
           label="Email"
           mode="outlined"

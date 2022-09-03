@@ -38,3 +38,15 @@ export const InputContainer = styled.View`
 export const InputForm = styled(TextInput).attrs({})`
   height: 50px;
 `;
+export const Title = styled.Text`
+  font-size: ${(props) => props.theme.fontSizes.title};
+  font-weight: ${(props) => props.theme.fontWeights.bold};
+  align-self: center;
+`;
+export const AnimationWrapper = styled.View`
+  width: 100%;
+  height: 40%;
+  position: absolute;
+  top: 30px;
+  padding: ${(props) => props.theme.space[2]};
+`;

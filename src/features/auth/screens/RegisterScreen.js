@@ -10,6 +10,7 @@ import {
   AuthButton,
   InputContainer,
   InputForm,
+  Title,
 } from "../components/auth.styles";
 const RegisterScreen = ({ navigation }) => {
   const [email, setEmail] = useState("");
@@ -19,7 +20,11 @@ const RegisterScreen = ({ navigation }) => {
   return (
     <BackgroundImage>
       <BackgroundCover />
+
       <InputContainer>
+        <Spacer size="large" />
+        <Title>Register</Title>
+        <Spacer size="large" />
         <InputForm
           label="Email"
           mode="outlined"

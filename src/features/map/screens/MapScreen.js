@@ -6,6 +6,7 @@ import Search from "../components/search.component";
 import { LocationContext } from "../../../services/location/location.context";
 import { RestaurantsContext } from "../../../services/restaurants/restaurants.context";
 import { MapViewCallout } from "../components/MapViewCallout";
+import FadeAnimation from "../../components/animations/FadeAnimation";
 
 const Map = styled(MapView)`
   height: 100%;
@@ -30,7 +31,7 @@ const MapScreen = ({ navigation }) => {
   }, [location, viewport]);
 
   return (
-    <>
+    <FadeAnimation>
       <Map
         region={{
           latitude: lat,
@@ -63,7 +64,7 @@ const MapScreen = ({ navigation }) => {
         })}
       </Map>
       <Search />
-    </>
+    </FadeAnimation>
   );
 };
 

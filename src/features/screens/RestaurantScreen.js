@@ -9,6 +9,7 @@ import Search from "../components/Search.Component";
 import { RestaurantsContext } from "../../services/restaurants/restaurants.context";
 import { FavouritesContext } from "../../services/favourites/favourites.context";
 import FavouriteBar from "../components/favourites/FavouriteBar";
+import FadeAnimation from "../components/animations/FadeAnimation";
 
 const RestaurentList = styled(FlatList).attrs({
   contentContainerStyle: { padding: 16 },
@@ -52,7 +53,9 @@ const RestaurantScreen = ({ navigation }) => {
                 })
               }
             >
-              <RestaurentInfo restaurant={item} />
+              <FadeAnimation>
+                <RestaurentInfo restaurant={item} />
+              </FadeAnimation>
             </TouchableOpacity>
           );
         }}
